@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/2175afb0-6d33-4d4f-b8ed-f82517ca1b23/AppServices/subscriptions/2175afb0-6d33-4d4f-b8ed-f82517ca1b23/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/kevindalling",
+    "appService.deploySubpath": "Application"
+}
