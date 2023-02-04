@@ -1,3 +1,8 @@
+/* Name: Kevin Dalling
+   ID#: 301247589
+   Date: February 4, 2023
+*/
+
 // installed 3rd party packages
 let createError = require('http-errors');
 let express = require('express');
@@ -41,3 +46,9 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+// handle POST data
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({ extended: true }));
