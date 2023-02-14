@@ -39,4 +39,19 @@ router.post('/contact',function(request,response){
 
 });
 
+/* GET Route for displaying the login Page */
+router.get('/login',indexController.displayLoginPage);
+
+/*  POST Route for processing the login Page */
+router.post('/login',indexController.processLoginPage);
+
+/* GET Route for displaying the registration Page */
+router.get('/register',indexController.displayRegisterPage);
+
+/*  POST Route for processing the registration Page  */
+router.post('/register',indexController.processRegisterPage);
+
+/*  Get Route to perform user log out */
+router.get('/logout',indexController.performLogout);
+
 module.exports = router;

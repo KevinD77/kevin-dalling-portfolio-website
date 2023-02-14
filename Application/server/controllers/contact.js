@@ -1,27 +1,33 @@
 let express = require('express')
 let router = express.Router();
 let mongoose = require('mongoose')
+let passport = require('passport');
+
+// define the User Model instance
+let userModel = require('../models/user')
+let User = userModel.User; // alias
 
 // create a reference to the contact model
 let Contact = require('../models/contact');
 
 module.exports.displayContactList = (req,res, next) => {
-    Contact.find((err,contactList) => {
-         if(err)
-         {
-            return console.error(err);
-         }
-         else{
-            //console.log(ContactList)
-            res.render('contact/list',{title:'BusinessContactsList',ContactList: contactList})
-         }
+   
+      Contact.find((err,contactList) => {
+            if(err)
+            {
+               return console.error(err);
+            }
+            else{
+               //console.log(ContactList)
+               res.render('contact/list',{title:'BusinessContactsList',ContactList: contactList, displayName: req.user ? req.user.displayName : ''})
+            }
 
-    });
-    
+      }).sort({last_name:1,first_name:1}); // sort by last name and then first name*/
+
 }
 
 module.exports.displayAddPage= (req,res,next) => {
-    res.render('contact/add',{title:'Add Contact'})
+    res.render('contact/add',{title:'Add Contact',displayName: req.user ? req.user.displayName : ''})
 };
 
 module.exports.processAddPage = (req,res,next) => {
@@ -57,7 +63,7 @@ module.exports.processAddPage = (req,res,next) => {
        }
        else{
           //show the edit view
-          res.render('contact/edit',{title: "Edit Contact",contact: contactToEdit})
+          res.render('contact/edit',{title: "Edit Contact",contact: contactToEdit,displayName: req.user ? req.user.displayName : ''})
        }
  
     });
