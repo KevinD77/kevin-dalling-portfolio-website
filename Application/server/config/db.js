@@ -1,3 +1,9 @@
+/* Name: Kevin Dalling
+   ID#: 301247589
+   Date: February 19, 2023
+   File: index.js
+*/
+
 module.exports = 
 {
     //"URI": "mongodb://localhost/contact_db"

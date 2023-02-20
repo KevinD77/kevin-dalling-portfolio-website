@@ -1,3 +1,9 @@
+/* Name: Kevin Dalling
+   ID#: 301247589
+   Date: February 19, 2023
+   File: index.js
+*/
+
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');

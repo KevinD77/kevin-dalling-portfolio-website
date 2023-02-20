@@ -1,3 +1,7 @@
+/* Name: Kevin Dalling
+   ID#: 301247589
+   Date: February 19, 2023
+*/
 // require modules for the User Model
 let mongoose = require('mongoose')
 let passportLocalMongoose = require('passport-local-mongoose')

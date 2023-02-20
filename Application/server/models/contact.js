@@ -1,3 +1,8 @@
+/* Name: Kevin Dalling
+   ID#: 301247589
+   Date: February 19, 2023
+*/
+
 let mongoose = require('mongoose');
 
 // create a model class

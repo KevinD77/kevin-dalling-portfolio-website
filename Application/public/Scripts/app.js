@@ -1,6 +1,6 @@
 /* Name: Kevin Dalling
    ID#: 301247589
-   Date: February 4, 2023
+   Date: February 19, 2023
 */
 
 // IIFE - Immediately Invoked Function Express
@@ -10,7 +10,7 @@
         console.log("App Started...");
 
         let deleteButtons = document.querySelectorAll('.btn-danger')
-
+        // confirm if we should go ahead and delete record
         for(button of deleteButtons){
             button.addEventListener('click',(event)=> {
                if(!confirm("Are you sure?"))

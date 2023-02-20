@@ -22,7 +22,7 @@ module.exports.displayContactList = (req,res, next) => {
                res.render('contact/list',{title:'BusinessContactsList',ContactList: contactList, displayName: req.user ? req.user.displayName : ''})
             }
 
-      }).sort({last_name:1,first_name:1}); // sort by last name and then first name*/
+      }).sort({last_name:1,first_name:1}); // sort by last name and then first name
 
 }
 
